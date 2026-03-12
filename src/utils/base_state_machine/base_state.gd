@@ -2,8 +2,8 @@
 class_name BaseState
 extends RefCounted
 
-# 状态持有者（通常是角色/管理器）
-var owner: Node
+# 状态持有者(通常是角色/管理器)
+var owner: Node = null  
 
 # ==========状态生命周期函数==========
 ## 进入状态时调用方法
