@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://bakxblxc0sc40"]
+
+[ext_resource type="Texture2D" uid="uid://or74e5qk1tnm" path="res://icon.svg" id="1_5p55f"]
+[ext_resource type="Script" uid="uid://bchg1d742gtsr" path="res://src/components/CardBase/cardbase.gd" id="1_r67kn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5p55f"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[node name="CardBase" type="Node" unique_id=686783269]
+
+[node name="StateMachine" type="Node" parent="." unique_id=736304431]
+script = ExtResource("1_r67kn")
+
+[node name="Panel" type="Panel" parent="." unique_id=270319319]
+offset_right = 220.0
+offset_bottom = 302.0
+
+[node name="ColorRect" type="ColorRect" parent="Panel" unique_id=1083147953]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -141.0
+offset_right = 100.0
+offset_bottom = 141.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/ColorRect" unique_id=149898409]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -92.0
+offset_right = 64.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5p55f")
+
+[node name="Label" type="Label" parent="Panel/ColorRect" unique_id=1546976076]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -107.0
+offset_right = 64.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "你的卡牌
+"
+label_settings = SubResource("LabelSettings_5p55f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Panel" unique_id=952752919]
+self_modulate = Color(1, 1, 1, 0.3882353)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
